@@ -1,3 +1,5 @@
+from typing import Any, Dict
+
 from langgraph.graph import StateGraph, END
 from synbio_agent.state import AgentState
 from synbio_agent.nodes.extraction import extraction_node

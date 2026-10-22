@@ -1,5 +1,5 @@
-from typing import TypedDict, Optional, Dict, Any
-from schemas import MemberProfilePayload
+from typing import TypedDict, Optional
+from synbio_agent.schemas import MemberProfilePayload
 
 class AgentState(TypedDict):
     # Inputs recibidos desde el webhook de Google Forms
