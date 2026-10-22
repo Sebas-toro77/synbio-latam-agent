@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "synbio-latam-agent"
+version = "0.1.0"
+description = "AI Agent en LangGraph para la extracción y normalización de perfiles de miembros de SynBio LATAM"
+authors = ["Sebastian Toro <sebas.toro77@eia.edu.co>"]
+readme = "README.md"
+packages = [{include = "synbio_agent", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langgraph = "^0.2.0"
+langchain-core = "^0.3.0"
+langchain-ollama = "^0.3.0"
+pydantic = "^2.9.0"
+pydantic-settings = "^2.5.0"
+psycopg2-binary = "^2.9.9"
+sqlalchemy = "^2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.0"
+pytest-mock = "^3.14.0"
+ruff = "^0.6.0"
+mypy = "^1.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+src = ["src", "tests"]
+line-length = 100
